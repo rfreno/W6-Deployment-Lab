@@ -23,7 +23,6 @@ app.get('/css', (req,res) => {
 
 app.use('/js', express.static(path.join(__dirname, './index.js')))
 
-
 app.listen(port, () => {
     console.log('Listening at port ' + port)
 })

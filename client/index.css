@@ -1,10 +1,36 @@
-header {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50pt;
+body {
+    background-image: url("header_img.jpg");
+    background-size: cover;
 }
 
-img {
+header {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50pt;
     position:flexbox;
-    justify-content: center;
-    width: 800px;
+    text-align: center;
+    
+}
+
+.bodyText {
+    margin:10px;
+}
+.bodyContent {
+    background-color: aqua;
+    filter:opacity(80%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    border-radius: 40px;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8pt;
+    font-variant-caps: small-caps;
+    text-align: center;
+    font-weight: bolder;
+}
+
+body {
+    margin:50px;
 }
