@@ -21,6 +21,9 @@ app.get('/css', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.css'))
 })
 
+app.use('/js', express.static(path.join(__dirname, './index.js')))
+
+
 app.listen(port, () => {
     console.log('Listening at port ' + port)
 })
