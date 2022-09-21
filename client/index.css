@@ -1,0 +1,10 @@
+.header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50pt;
+}
+
+.img {
+    position:flexbox;
+    justify-content: center;
+    width: 800px;
+}
