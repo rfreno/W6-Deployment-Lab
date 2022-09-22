@@ -4,12 +4,22 @@ body {
 }
 
 header {
-
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50pt;
     position:flexbox;
     text-align: center;
-    
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30pt;
+    position:flexbox;
+    text-align: center;
+}
+
+form {
+    position:flexbox;
+    text-align: center;
 }
 
 .bodyText {

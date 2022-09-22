@@ -65,14 +65,14 @@ app.post('/api/students', (req, res) => {
    try {
        if (index === -1 && name !== '') {
            students.push(name)
-           rollbar.log('student was added successfully')
+           rollbar.log('service was added successfully')
            res.status(200).send(students)
        } else if (name === ''){
             rollbar.critical('submission was empty')
-           res.status(400).send('You must enter a name.')
+           res.status(400).send('You must enter a service.')
        } else {
-            rollbar.error('student name already exists')
-           res.status(400).send('That student already exists.')
+            rollbar.error('service already exists')
+           res.status(400).send('That service already exists.')
        }
    } catch (err) {
        console.log(err)
@@ -83,7 +83,7 @@ app.delete('/api/students/:index', (req, res) => {
     const targetIndex = +req.params.index
     
     students.splice(targetIndex, 1)
-    rollbar.info('Student was deleted')
+    rollbar.info('Service was deleted')
     res.status(200).send(students)
 })
 
