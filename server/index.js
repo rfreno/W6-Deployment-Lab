@@ -18,7 +18,7 @@ var rollbar = new Rollbar({
 });
 
 // record a generic message and send it to Rollbar
-rollbar.log("Main page has loaded!");
+rollbar.info("Main page has loaded!");
 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
@@ -34,7 +34,7 @@ app.get('/image', (req,res) => {
 app.get('/fake', (req, res) => {
     try {
         console.log('This doesn\'t do anything')
-        rollbar.log('This doesn\'t do anything')
+        rollbar.warning('This doesn\'t do anything')
     } catch (err) {
         console.log(err)
         rollbar.error(err)
@@ -64,7 +64,7 @@ app.post('/api/students', (req, res) => {
            rollbar.log('student was added successfully')
            res.status(200).send(students)
        } else if (name === ''){
-            rollbar.error('submission was empty')
+            rollbar.critical('submission was empty')
            res.status(400).send('You must enter a name.')
        } else {
             rollbar.error('student name already exists')
