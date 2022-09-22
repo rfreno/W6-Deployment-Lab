@@ -18,18 +18,26 @@ var rollbar = new Rollbar({
 });
 
 // record a generic message and send it to Rollbar
-rollbar.log("Hello world!");
+rollbar.log("Main page has loaded!");
 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
 })
-
 
 app.get('/css', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.css'))
 })
 app.get('/image', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/header_img.jpg'))
+})
+
+app.get('/fake', (req, res) => {
+    try {
+        rollbar.log('This doesn\'t do anything')
+    } catch (err) {
+        console.log(err)
+        rollbar.error(err)
+    }
 })
 
 app.use('/js', express.static(path.join(__dirname, './index.js')))
