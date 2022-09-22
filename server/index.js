@@ -37,7 +37,7 @@ app.get('/image', (req,res) => {
 app.get('/fake', (req, res) => {
     try {
         console.log('This doesn\'t do anything')
-        rollbar.warning('This doesn\'t do anything')
+        rollbar.warning('You fell for a fake link')
     } catch (err) {
         console.log(err)
         rollbar.error(err)
