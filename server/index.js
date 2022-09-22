@@ -33,6 +33,7 @@ app.get('/image', (req,res) => {
 
 app.get('/fake', (req, res) => {
     try {
+        console.log('This doesn\'t do anything')
         rollbar.log('This doesn\'t do anything')
     } catch (err) {
         console.log(err)
