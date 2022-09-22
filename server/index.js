@@ -42,6 +42,7 @@ app.get('/fake', (req, res) => {
 })
 
 
+const students = ['PowerWashing', 'Indoor Window Cleaning', 'High Shine']
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/index.html'))
